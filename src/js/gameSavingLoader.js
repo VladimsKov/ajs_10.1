@@ -1,11 +1,8 @@
-// TODO: write your code here
-
 import read from './reader';
 import json from './parser';
 import GameSaving from './gameSavings';
-// import GameSavingLoader from './gameSavingLoader';
 
-class GameSavingLoader {
+export default class GameSavingLoader {
   static load() {
     return read()
       .then((data) => json(data))
@@ -19,7 +16,3 @@ class GameSavingLoader {
       });
   }
 }
-
-GameSavingLoader.load()
-  .then((saving) => saving,
-    (error) => error);
